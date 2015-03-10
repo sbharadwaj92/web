@@ -6,7 +6,7 @@ public class ProductBean
 	private String productName;
 	private String description;
 	private String category;
-	private double price;
+	private float price;
 	private int quantity;
 	private String status;
 	
@@ -34,10 +34,10 @@ public class ProductBean
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public double getPrice() {
+	public float getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
+	public void setPrice(float price) {
 		this.price = price;
 	}
 	public int getQuantity() {

@@ -70,6 +70,63 @@ function validateProductForm()
 	return true;
 }
 
+function validateUProductForm()
+{
+	var name=/^[a-zA-Z ]+$/;
+	if(name.test(document.productform.pname.value)==false || document.productform.pname.value.length<5 || document.productform.pname.value.length>15)
+	{
+		document.getElementById('errorprod').innerHTML = "Please enter valid product name(5-15 characters)";
+		return false;
+	}
+	if(document.productform.pdesc.value.length<10 || document.productform.pdesc.value.length>50)
+	{
+		document.getElementById('errorprod').innerHTML = "Please enter valid product description(10-50 characters)";
+		return false;
+	}
+	if(document.productform.pcat.value=="Select Category")
+	{
+		document.getElementById('errorprod').innerHTML = "Please select a category";
+		return false;
+	}
+	if(isNaN(document.productform.pprice.value) || document.productform.pprice.value<=0.0)
+	{
+		document.getElementById('errorprod').innerHTML = "Please enter valid price";
+		return false;
+	}
+	if(isNaN(document.productform.ptot.value) || document.productform.ptot.value<=0)
+	{
+		document.getElementById('errorprod').innerHTML = "Please enter valid quantity";
+		return false;
+	}
+	if(document.getElementById('pradio1').checked ==false && document.getElementById('pradio2').checked==false)
+	{
+		document.getElementById('errorprod').innerHTML = "Please select a status";
+		return false;
+	}
+	var r = confirm("Are you sure you want to update");
+	if(r)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+function deleteForm()
+{
+	var r = confirm("Are you sure you want to delete");
+	if(r)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
 function validateQueryForm()
 {
 	var em = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;

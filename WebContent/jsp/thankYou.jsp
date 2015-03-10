@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Home</title>
+<title>Thank You</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="stylesheet"
@@ -20,19 +20,15 @@
 	<jsp:include page="/jsp/includes/topPanel.jsp" />
 	<div class="container-fluid">
 		<jsp:include page="/jsp/includes/leftPanel.jsp" />
-
 		<div class="col-md-9 col-md-offset-1"
 			style="padding: 0px; margin-top: 1%; padding-right: 1%;">
 			<h4 style="text-align: right;">Welcome Admin</h4>
-			<div class="col-md-12">
-				<img class="img-responsive"
-					src="<%=request.getContextPath()%>/images/sale.jpg">
-			</div>
+			<h4 style="color: green; padding-top: 100px;">Thank you for
+				posting the query. We will connect you either via Mobile/Email</h4>
 		</div>
+
+
 	</div>
-
-
-
 	<jsp:include page="/jsp/includes/footer.jsp" />
 </body>
 </html>
